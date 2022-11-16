@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 from uuid import uuid4
 
-from ema_api.enums import Gender
+from dog_api.enums import Gender
 
 
 class Dog(BaseModel):
