@@ -2,7 +2,9 @@ import redis
 import json
 from typing import List, Any, NoReturn
 
-redis_connection = redis.Redis(host="127.0.0.1", port=6379)
+from app.settings import REDIS_PORT, REDIS_HOST
+
+redis_connection = redis.Redis(host=REDIS_HOST, port=REDIS_PORT)
 
 
 def get(key: str) -> Any:

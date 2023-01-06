@@ -2,10 +2,13 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 from uuid import uuid4
 
-from dog_api.enums import Gender
+from app.enums import Gender
 
 
 class Dog(BaseModel):
+    """
+    docstrings
+    """
     name: str = Field(
         default=None,
         description="Input your pet's name"
@@ -27,6 +30,9 @@ class Dog(BaseModel):
 
 
 class Output(BaseModel):
+    """
+    docstrings
+    """
     success: bool
     message: Optional[str] = None
     results: Optional[List[dict]] = None
